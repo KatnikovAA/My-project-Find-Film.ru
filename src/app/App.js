@@ -1,8 +1,10 @@
 import './App.css';
-
+import MainFilm from '../pages/mainFilm';
 function App() {
   return (
-    <div> Hellow World ! </div>
+    <div>
+     <MainFilm></MainFilm>
+    </div>
   );
 }
 
