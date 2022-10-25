@@ -12,21 +12,21 @@ export function Content ({fotoURL, contentText, contentYear, contentSlogan, cont
                 <div className="nameFilm">
                 {nameFilm}
                 </div>
-                <div className="textFilm">
+                <div className="textFilm flexDiv">
                     <div class="DivName">О Фильме</div>
-                    <div className="textFilmDivResp">{contentText}</div>
+                    <div className="textFilmDivResp">{contentText} О Фильме</div>
                 </div>
-                <div class="yearFilm">
+                <div class="yearFilm flexDiv">
                     <div class="DivName">Год</div>
-                    <div class="textFilmDivResp">{contentYear}</div>
+                    <div class="yearFilmDivResp">{contentYear} Год</div>
                 </div>
-                <div class="sloganFilm">
+                <div class="sloganFilm flexDiv">
                     <div class="DivName">Слоган</div>
-                    <div class="sloganFilmDivResp">{contentSlogan}</div>
+                    <div class="sloganFilmDivResp">{contentSlogan} Слоган</div>
                 </div>
-                <div class="pleaceOnTop250">
+                <div class="pleaceOnTop250 flexDiv">
                     <div class="DivName">Топ 250 </div>
-                    <div class="divPleaceOnTop250DivResp">{contentTop250}</div>
+                    <div class="divPleaceOnTop250DivResp">{contentTop250} Топ 250</div>
                 </div>
                 <div class="generalFilm flexDiv">
                     <div class="DivName">Жанр</div>

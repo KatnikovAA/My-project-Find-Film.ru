@@ -1,13 +1,58 @@
 .contentMain{
     display: flex;
-    justify-content:space-around ;
+    justify-content:center ;
+    gap: 20px;
     margin: 20px;
 }
 
 .contentInfo{
+ 
     padding: 0 500px 0 0;
 }
 
 .contentFoto{
     padding: 0 0 0 100px;
+}
+
+.flexDiv{
+    display: grid;
+    grid-template-columns: 200px 100% ;   
+    padding: 5px 0 5px 0;
+    gap: 20px;
+}
+
+.descriptionFilm{
+    width: 900px;
+}
+.nameFilm{
+    font-size: 20px;
+    color: #919191;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 6px 0;
+}
+.RuNameFilm{
+    font-family: fantasy;
+    font-size: 40px;
+    color: #1f1f1f;
+    margin: 20px 0 1px 0;
+}
+.aboutFilm{
+    margin: 20px 0 1px 0;
+    font-weight: bold;
+}
+
+.textFilm{
+    margin: 10px 0 5px 0;
+
+}
+.sloganFilm{
+    margin: 10px 0 5px 0;
+    font-weight: lighter;
+}
+
+
+
+img{
+    width: 300px;
+    height: 500px;
 }
