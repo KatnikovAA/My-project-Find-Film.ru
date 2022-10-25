@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content:space-around ;
+    background-color:#1f1f1f;
+    color: #959595;
+    font-size: 25px;
+    width: auto;
+    height: 80px; 
+    position: sticky;   
+    top: 0;
+}

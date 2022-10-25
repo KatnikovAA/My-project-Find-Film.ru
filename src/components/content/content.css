@@ -1,0 +1,13 @@
+.contentMain{
+    display: flex;
+    justify-content:space-around ;
+    margin: 20px;
+}
+
+.contentInfo{
+    padding: 0 500px 0 0;
+}
+
+.contentFoto{
+    padding: 0 0 0 100px;
+}
