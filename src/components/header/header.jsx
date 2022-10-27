@@ -2,12 +2,13 @@ import SearchFilm from "../../components/searchFilm";
 import Button from "../button";
 import Switch from "../switch";
 import "./header.css";
-export function Header () {
+export function Header ({onClick}) {
+
     return (
         <header className="header">
                 <SearchFilm />
                 <Switch label="TOP 250" className="header__switch--top250"/>
-                <Button icon="▶" text="Случайный фильм" />
+                <Button icon="▶" text="Случайный фильм" onClick={onClick}/>
         </header>   
     )
 }

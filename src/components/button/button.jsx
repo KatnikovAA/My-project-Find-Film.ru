@@ -2,11 +2,19 @@ export function Button (props) {
     const {
         className,
         icon,
-        text
+        text,
+        onClick
     } = props;
 
+    const handlyFirstEventClick = () =>{
+        console.log("Прервый клик!")
+        if(typeof onClick === "function"){
+            onClick();
+        }
+        
+    }
     return (
-        <button className={`button ${className}`}>
+        <button className={`button ${className}`} onClick={handlyFirstEventClick}>
             <span className="button__icon">
                 {icon}
             </span>
