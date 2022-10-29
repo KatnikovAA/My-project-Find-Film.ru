@@ -1,28 +1,18 @@
 import "./mainFilm.css"
 import Content from "../../components/content";
 import Header from "../../components/header";
+import { getFilm } from "../../api";
+import { useState } from "react";
 export function MainFilm () {
+    // в useState передаем начальное состояние оно может быть null undefaind 
+    // или пропс что угодно, как работает хук - один раз вызывается useState в него передаем начальное состоаяние. 
+    // это состояние подхватывает переменная film, а уже то что мы передаем в setFilm передает состояние в переменную film
+    const [film,setFilm] = useState(null);
     const handleSearchClickFunc = () =>{
-        console.log("Вызов fetch")
-        fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/100`, {
-            method: 'GET',
-            headers: {
-                'X-API-KEY': '5086766a-6459-4303-b5e7-0163dcefa45b',
-                'Content-Type': 'application/json',
-            },
-        })  
-        .then((response) => {
-            if(response.ok){
-                return response.json();
-            } else {
-                throw "Фильма с таким Id на Кинопосике не существует.\n Просьба попробовать другой Id !";
-            }
-        })
+        getFilm(301)
         .then((response)=>{
             console.log(response)
-        })
-        .catch((error1)=>{
-            alert(error1)
+            setFilm(response);
         })
     }
     return (
