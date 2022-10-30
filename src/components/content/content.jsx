@@ -1,38 +1,51 @@
 import "./content.css";
-export function Content ({fotoURL, contentText, contentYear, contentSlogan, contentTop250, RuNameFilm, nameFilm}) {
+import { useEffect, useState } from "react";
+import { getFilm } from "../../api";
+export function Content ({filmId}) {
+    const [film, setFilm] = useState(null);
+    useEffect(() =>{
+        getFilm(filmId)
+        .then((response)=>{
+            setFilm(response);
+        })
+    },[filmId])
+
+    if(film == null) {
+        return <></>
+    }
+    
     return (
         <div className="contentMain">
             <div className="contentFoto">
-                <img src={fotoURL} />
+                <img src={film.posterUrl} />
             </div>
-            <div className="contentInfo">   
+            <div className="contentInfo">
                 <div className="RuNameFilm">
-                {RuNameFilm}
+                {film.nameRu}
                 </div>
                 <div className="nameFilm">
-                {nameFilm}
+                {film.nameOriginal}
                 </div>
                 <div className="textFilm flexDiv">
                     <div className="DivName">О Фильме</div>
-                    <div className="textFilmDivResp">{contentText} О Фильме</div>
+                    <div className="textFilmDivResp">{film.shortDescription}</div>
                 </div>
                 <div className="yearFilm flexDiv">
                     <div className="DivName">Год</div>
-                    <div className="yearFilmDivResp">{contentYear} Год</div>
+                    <div className="yearFilmDivResp">{film.year[0]}</div>
                 </div>
                 <div className="sloganFilm flexDiv">
                     <div className="DivName">Слоган</div>
-                    <div className="sloganFilmDivResp">{contentSlogan} Слоган</div>
+                    <div className="sloganFilmDivResp">{film.slogan}</div>
                 </div>
                 <div className="pleaceOnTop250 flexDiv">
                     <div className="DivName">Топ 250 </div>
-                    <div className="divPleaceOnTop250DivResp">{contentTop250} Топ 250</div>
+                    <div className="divPleaceOnTop250DivResp">{film.ratingKinopoisk} Топ 250</div>
                 </div>
                 <div className="generalFilm flexDiv">
                     <div className="DivName">Жанр</div>
                     <div className="generalList">
-                        <div className="genres_0">• драма</div>
-                        <div className="genres_1">• военный</div>
+                        <div className="genres_0">{film.genres[0]}</div>
                     </div>  
                 </div>
             </div>

@@ -17,7 +17,17 @@ export const getFilm = (id) =>{
         }
     })
     .then((response)=>{
-       return response;
+        return {
+            nameOriginal: response.nameOriginal,
+            nameRu: response.nameRu,
+            posterUrl: response.posterUrl,
+            ratingKinopoisk: response.ratingKinopoisk,
+            slogan: response.slogan,
+            year: response.year,
+            shortDescription: response.shortDescription,
+            countries: response.countries.map((item) => item.country),
+            genres: response.genres.map((item) => item.genre)
+        }
     })
     .catch((error1)=>{
         alert(error1)
@@ -30,3 +40,5 @@ export const getFilm = (id) =>{
     reject();
  })
 */
+
+
