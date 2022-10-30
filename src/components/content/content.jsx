@@ -2,6 +2,8 @@ import "./content.css";
 import { useEffect, useState } from "react";
 import { getFilm } from "../../api";
 export function Content ({filmId}) {
+    //useEffect получает на выходи функцию которая что то делает, если изменилась переменная которая в []
+    //мы вызываем фетч по Id когда приходит ответ вызываем useState что бы отрисовать страницу
     const [film, setFilm] = useState(null);
     useEffect(() =>{
         getFilm(filmId)

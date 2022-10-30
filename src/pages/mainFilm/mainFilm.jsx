@@ -1,7 +1,7 @@
 import "./mainFilm.css"
 import Content from "../../components/content";
 import Header from "../../components/header";
-import { getFilm } from "../../api";
+import { getFilm, getRandomFilmId} from "../../api";
 import { useState } from "react";
 import { getRandomId } from "../../tools"; 
 import { minFilmId , maxFilmId } from "../../const";
@@ -16,8 +16,16 @@ export function MainFilm () {
 //    .then((response)=>{
 //     console.log(response)
         
-        setFilmId(getRandomId(minFilmId,maxFilmId));
-        
+        //setFilmId(getRandomId(minFilmId,maxFilmId));
+        getRandomFilmId()
+        .then((id)=>{
+            setFilmId(id);
+            
+        })
+        .catch((error1)=>{
+            console.log(error1)
+            alert(error1)
+        })
     }
     // expr ? true : false
     // expr && <sfdsf></sdfdf>
