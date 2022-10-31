@@ -3,7 +3,7 @@ import { minFilmId, maxFilmId } from "../const"
 
 export const getRandomFilmId = () => {
     let count = 0;
-    let maxCount = 9;
+    let maxCount = 15;
     const repeat = () => {
         let id = getRandomId(minFilmId, maxFilmId)
         console.log("начало")
@@ -17,7 +17,19 @@ export const getRandomFilmId = () => {
         .then((response) => {
             if (response.ok) 
             {   
-                
+                return response.json()
+                .then((response)=>{
+                    if(response.nameRu == null || response.ratingKinopoisk == null)
+                    {
+                        console.log("нет инфы" , response.nameRu , response.ratingKinopoisk )
+                        count++
+                        return repeat();
+                    } else
+                    {
+                    console.log("Вышел")
+                    return id;
+                    }
+                })
                 return id;
                 console.log("конце")
                 // return fetch(`https://kinopoiskapiunofficial.tech/images/posters/kp/${id}.jpg`, {
@@ -71,7 +83,6 @@ export const getFilm = (id) =>{
     })  
     .then((response) => {
         if(response.ok){
-            console.log("авыа" , response)
             return response.json();
         } else {
             throw "Фильма с таким Id на Кинопосике не существует.\n Просьба попробовать другой Id !";

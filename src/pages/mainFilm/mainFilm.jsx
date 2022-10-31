@@ -5,6 +5,8 @@ import { getFilm, getRandomFilmId} from "../../api";
 import { useState } from "react";
 import { getRandomId } from "../../tools"; 
 import { minFilmId , maxFilmId } from "../../const";
+
+
 export function MainFilm () {
     // в useState передаем начальное состояние оно может быть null undefaind 
     // или пропс что угодно, как работает хук - один раз вызывается useState в него передаем начальное состоаяние. 
@@ -32,6 +34,7 @@ export function MainFilm () {
     return (
         <div>
             <Header  onClick={handleSearchClickFunc}/>
+        
             {
                 filmId != null && <Content filmId={filmId}/>
                 //film != null ? <Content film={film}/> : null

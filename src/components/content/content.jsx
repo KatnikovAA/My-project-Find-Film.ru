@@ -1,6 +1,7 @@
 import "./content.css";
 import { useEffect, useState } from "react";
 import { getFilm } from "../../api";
+import LoadIndicator from "../loadIndicator";
 export function Content ({filmId}) {
     //useEffect получает на выходи функцию которая что то делает, если изменилась переменная которая в []
     //мы вызываем фетч по Id когда приходит ответ вызываем useState что бы отрисовать страницу
@@ -13,7 +14,10 @@ export function Content ({filmId}) {
     },[filmId])
 
     if(film == null) {
-        return <></>
+        {console.log("загрузка стрнаницы loadPage ")}
+        return (
+         <LoadIndicator/>
+        )
     }
     
     return (
@@ -34,7 +38,7 @@ export function Content ({filmId}) {
                 </div>
                 <div className="yearFilm flexDiv">
                     <div className="DivName">Год</div>
-                    <div className="yearFilmDivResp">{film.year[0]}</div>
+                    <div className="yearFilmDivResp">{film.year}</div>
                 </div>
                 <div className="sloganFilm flexDiv">
                     <div className="DivName">Слоган</div>
