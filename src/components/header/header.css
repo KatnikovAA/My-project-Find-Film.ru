@@ -9,3 +9,17 @@
     position: sticky;   
     top: 0;
 }
+.header__switchz__top250{
+    width: 300px;
+}
+
+
+header .findFilmButton{
+    background-color:#1f1f1f;
+    border:none;
+    color: #919191;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: fantasy;
+
+}

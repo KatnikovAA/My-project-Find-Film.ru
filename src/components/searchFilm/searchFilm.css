@@ -1,0 +1,16 @@
+.search-film__input{
+    margin: 20px;
+}
+
+.search-film__input{
+    background-color: #3e3e3e;
+    text-align: center;
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+    color: #919191;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    margin: 20px 0 0 50px;
+    font-family: fantasy;
+}

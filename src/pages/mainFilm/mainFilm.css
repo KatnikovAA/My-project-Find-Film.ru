@@ -5,3 +5,70 @@ body{
     font-weight: normal;
     margin:  0 auto;
 }
+
+
+.favoritFilmPoster{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   
+}
+
+.faoriteLable{
+    /* margin: 0 auto; */
+    margin: 20px;
+    font-size: 50px ;
+
+  }
+
+  .favorite{
+    display: flex;
+    justify-content: center;
+  }
+
+   .favoriteButtonDelet {
+    text-decoration: none;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 30px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #353535;
+    background: rgb(233,233,233);
+    box-shadow: 0 8px 15px rgba(168, 3, 3, 0.7);
+    transition: .3s;
+  }
+  .favoriteButtonDelet:hover {
+    background: rgba(168, 3, 3, 0.7);
+    box-shadow: 0 15px 20px rgba(255, 255, 255, 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+
+  .favoriteButtonRandomSelect {
+    text-decoration: none;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 30px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #353535;
+    background: rgb(233,233,233);
+    box-shadow: 2px 8px 15px rgba(2, 136, 82, 0.4);
+    transition: .3s;
+  }
+  .favoriteButtonRandomSelect:hover {
+    background: rgba(2, 136, 82, 0.4);
+    box-shadow: 0 15px 20px rgba(255, 255, 255, 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }

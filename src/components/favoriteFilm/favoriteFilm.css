@@ -1,0 +1,63 @@
+
+.posterFilm img{
+    width: 150px;
+    height: auto;
+}
+
+
+
+.posterFilm{
+    display: flex;
+}
+
+.FilmLogo{
+    margin: 50px;
+    flex-basis: 2000px;
+
+}
+
+.hortDiscriptionFilm{
+    visibility: hidden;
+    padding: 20px;
+    max-width: 190px;
+    width: 100%;
+   }
+
+.favoritFilmPoster :hover.FilmLogo{
+    
+    box-shadow: 0 0 10px 5px rgb(41, 41, 41);
+
+}
+
+.favoritFilmPoster :hover>.hortDiscriptionFilm{
+    visibility: visible;
+    
+
+}
+.favoritFilmPoster :hover>.button{
+    visibility: visible;
+}
+.favoritFilmPoster .button{
+    visibility: hidden;
+    position: relative;
+    transform: translate(0%, 0%);
+    border:none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    background-color: rgb(244, 244, 244);
+    
+}
+
+.RuNameFavoriteFilm{
+    font-weight: bold;
+    padding: 2px;
+}
+.DivName{
+    padding: 2px; 
+}
+
+.yearFilm {
+    padding: 5px;
+}

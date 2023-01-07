@@ -1,17 +1,32 @@
+
 .contentMain{
     display: flex;
     justify-content:center ;
     gap: 20px;
-    margin: 20px;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+    max-width: 1500px;
+    max-height: 1500px;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0 0 250px;
+    
+    
 }
 
 .contentInfo{
- 
+    max-width: 600px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
     padding: 0 500px 0 0;
 }
 
 .contentFoto{
-    padding: 0 0 0 100px;
+
 }
 
 .flexDiv{
@@ -54,5 +69,25 @@
 
 img{
     width: 300px;
-    height: 500px;
+    height: auto;
+}
+
+.contentMain .button{
+    border:none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    background-color: rgb(244, 244, 244);
+}
+
+.contentMain .switch .checkbox{
+    visibility: hidden;
+}
+.contentMain .switch div{
+    border:none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
 }
