@@ -15,7 +15,7 @@ import { objGenre, objCountris, arrTypeFilm } from "../../const";
 import axios from "axios";
 
 export function MainFilm () {
-    // в useState передаем начальное состояние оно может быть null undefaind
+    // в useState передаем начальное состояние оно может быть null undefaind.
     // или пропс что угодно, как работает хук - один раз вызывается useState в него передаем начальное состоаяние.
     // это состояние подхватывает переменная film, а уже то что мы передаем в setFilm передает состояние в переменную film
     const [filmId,setFilmId] = useState(null);
