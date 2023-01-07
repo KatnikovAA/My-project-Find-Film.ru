@@ -23,6 +23,7 @@ body{
   .favorite{
     display: flex;
     justify-content: center;
+    padding: 50px;
   }
 
    .favoriteButtonDelet {
@@ -72,3 +73,90 @@ body{
     color: white;
     transform: translateY(-7px);
   }
+
+  .mainContent{
+    display: flex;
+    justify-content: space-around;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+  }
+  .carouselButton{
+    
+  height: 60px;
+  /* width: auto; */
+  /* visibility: hidden; */
+  border-radius: 40px;
+  /* display: flex; */
+  margin: 200px 0 0 0px;
+  cursor: pointer;
+  }
+
+  .emptyCarouselContent{
+    box-shadow: 0 1px 4px rgb(0 0 0), -23px 0 20px -23px rgb(0 0 0 / 80%), 23px 0 20px -23px rgb(0 0 0 / 80%), 0 0 40px rgb(0 0 0 / 10%) inset;
+    max-width: 1500px;
+    max-height: 2500px;
+    min-width: 50px;
+    border: #353535 1px solid;
+  }
+
+  @keyframes carouselMoveRight{
+    0%{
+      right: 0px
+
+    }
+
+    100%{
+      right: 100px
+    }
+  }
+
+  .mainBlockCarousel{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 1500px;
+
+    animation-duration: 0.15s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+  }
+
+  @keyframes carouselMoveLift{
+    0%{
+      left: 0px
+
+    }
+
+    100%{
+      left: 100px
+    }
+  }
+
+
+
+  .mainBlockText{
+    font-family: Verdana, sans-serif;
+    font-size: 40px;
+    color: #1f1f1f;
+    margin: 0 0 0 30%;
+    padding: 10px;
+}
+
+
+.adviceArrow{
+  padding-left: 100px;
+}
+
+
+.adviceText{
+  margin: 50px 0 0 0;
+  width: auto;
+  text-align: center;
+}
+.adviceImg{
+  padding-top: 10px;
+}

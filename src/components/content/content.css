@@ -1,32 +1,11 @@
 
-.contentMain{
-    display: flex;
-    justify-content:center ;
-    gap: 20px;
 
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
-    -23px 0 20px -23px rgba(0, 0, 0, .8),
-    23px 0 20px -23px rgba(0, 0, 0, .8),
-    0 0 40px rgba(0, 0, 0, .1) inset;
-    max-width: 1500px;
-    max-height: 1500px;
-    width: 100%;
-    height: 100%;
-    margin: 20px 0 0 250px;
-    
-    
-}
 
 .contentInfo{
     max-width: 600px;
-    max-height: 300px;
     width: 100%;
     height: 100%;
     padding: 0 500px 0 0;
-}
-
-.contentFoto{
-
 }
 
 .flexDiv{
@@ -67,9 +46,9 @@
 
 
 
-img{
+.contentFoto img{
     width: 300px;
-    height: auto;
+    height: 400px;
 }
 
 .contentMain .button{
@@ -91,3 +70,25 @@ img{
     width: 40px;
     font-size: 40px;
 }
+
+.contentMain{
+    display: flex;
+    justify-content:center ;
+    gap: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+    max-width: 1500px;
+    max-height: 2500px;
+    width: 100%;
+    height: 100%;
+   
+    animation-name: carouselMove;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+}
+
+

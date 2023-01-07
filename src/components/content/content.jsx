@@ -1,11 +1,11 @@
 import "./content.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef} from "react";
 import { getFilm } from "../../api";
 import LoadIndicator from "../loadIndicator";
 import Button from "../button";
 import Switch from "../switch";
 import SwitchStar from "../switchStar";
-export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavorite}) {
+export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavorite,deletFilmContent,addAnimationCarousel = 0 }) {
 
     //useEffect получает на выходи функцию которая что то делает, если изменилась переменная которая в []
     //мы вызываем фетч по Id когда приходит ответ вызываем useState что бы отрисовать страницу
@@ -13,18 +13,19 @@ export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavo
     const [star, setStar] = useState(false);
     const [newFilm, setNewFilm] = useState();
     const [loadContentStatus, setloadContentStatus] = useState(null);
+    const contentMainRef = useRef();
     useEffect(() =>{
-        console.log(filmId)
+        console.log(filmId + " useEffect в Content")
         setNewFilm(true)
         getFilm(filmId)
-        
         .then((response)=>{
             setFilm(response);
         })
     },[filmId])
-    const deletFilmId = () =>{
-        console.log("удаление")
-        setFilm(null);
+
+
+    const deletFilm= () =>{
+        deletFilmContent()
     }
     if(film == null) {
         return (
@@ -39,7 +40,7 @@ export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavo
     );
 
     return (
-        <div className="contentMain">
+        <div className="contentMain" >
             <div className="contentFoto">
                 <img src={film.posterUrl} />
             </div>
@@ -69,8 +70,8 @@ export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavo
                     <div className="yearFilmDivResp">{film.year}</div>
                 </div>
                 <div className="pleaceOnTop250 flexDiv">
-                    <div className="DivName">Топ 250 </div>
-                    <div className="divPleaceOnTop250DivResp">{film.ratingKinopoisk} Топ 250</div>
+                    <div className="DivName">Рейтинг Кинопоиска </div>
+                    <div className="divPleaceOnTop250DivResp">{film.ratingKinopoisk}</div>
                 </div>
                 <div className="generalFilm flexDiv">
                     <div className="DivName">Жанр</div>
@@ -80,13 +81,11 @@ export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavo
             </div>
             </div>
                     <div className="buttonFild">
-                    <Button className="close" icon="✘" onClick={deletFilmId}/>
-                    <div>
-                        {
-
-                        <SwitchStar onChange={onChangeFavorite} checked={isFavorite}/>
-
-                        }   
+                        <Button className="close" icon="✘" onClick={deletFilm}/>
+                        <div>
+                            {
+                            <SwitchStar onChange={onChangeFavorite} checked={isFavorite}/>
+                            }   
                         </div>
                     </div>
         </div>

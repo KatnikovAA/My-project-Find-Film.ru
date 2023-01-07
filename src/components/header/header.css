@@ -1,25 +1,49 @@
 .header{
     display: flex;
     justify-content:space-around ;
-    background-color:#1f1f1f;
+    background-color:#252525;
     color: #959595;
     font-size: 25px;
     width: auto;
     height: 80px; 
     position: sticky;   
     top: 0;
+    z-index: 997;
 }
 .header__switchz__top250{
     width: 300px;
 }
 
 
-header .findFilmButton{
-    background-color:#1f1f1f;
+header button{
+    background-color:#252525;
     border:none;
     color: #919191;
     font-size: 30px;
     cursor: pointer;
     font-family: fantasy;
+}
 
+.TypeSwitchz{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    background-color: #252525;
+}
+
+.headerSwitchz{
+    display: flex;
+    flex-direction: column;
+}
+
+.switchzText{
+    margin: 10px 10px 0 0;
+}
+
+.SearchButtonFromSwitch{
+    margin: 10px 0 0 10px;
+}
+
+.Empty{
+    display:none
 }

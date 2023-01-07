@@ -1,0 +1,131 @@
+.modalFulterFilm{
+    position: absolute;
+    min-width: 400px;
+    min-height: 300px;
+    background: rgb(232, 231, 231);
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: 1px solid rgba(0, 0, 0, 1); /* Параметры границы */
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+.modalFulterFilm .button{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+.textModal{
+    padding: 80px
+}
+.backDiv{
+    background-color: rgba(0, 0, 0, 0.450);
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: red;
+    font-size: 40px;
+    padding-top: 100px;
+    font-family: Impact Condensed;
+    display: flex;
+    justify-content: space-around;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+
+    
+}
+  .sliders_control {
+    display: flex;
+    justify-content: space-between;
+    min-height: 20px;
+  }
+  .sliderTextValue{
+    width: 30px;
+    height:auto;
+    margin-bottom: 15px;
+    
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;  
+  }
+  
+  input[type=range]::-webkit-slider-thumb:hover {
+    
+    background: #ffffff;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  }
+  
+  input[type="range"] {
+
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 2px;
+    width: 146px;
+    position: absolute;
+    background-color: #C6C6C6;
+    pointer-events: none;
+  }
+  
+  #fromSlider {
+    margin-right: 10px;
+    height: 0;
+    z-index: 1;
+  }
+
+  .rangeYear{
+    display: flex;
+    justify-content: center;
+  }
+  .fulterBlockText{
+    display: flex;
+    justify-content: space-between;
+  }
+  .selectGenres{
+    width: 100px;
+  }
+  .selectCountris{
+    width: 100px;
+  }
+  .radioType{
+    margin: 15px 0 15px 0 ;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.valueBetween{
+ background-color: #c6c6c6;
+ height: 6px;
+}
+  
