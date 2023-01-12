@@ -7,3 +7,4 @@ This project runs on domain [Find-Film.ru](http://find-film.ru/) open to view it
 - HTML
 - CSS / CSS-in-JS (styled-components)
 - React
+- JavaScript
