@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# You can look at this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project runs on domain [Find-Film.ru]([http://find-film.ru]).
 
 ## Available Scripts
 
