@@ -1,4 +1,6 @@
 import "./mainFilm.css"
+//import "./font/specimen_files/specimen_stylesheet.css"
+import arrImg from "../../img/free-png.ru-195-340x340.png";
 import Content from "../../components/content";
 import Header from "../../components/header";
 import { getFilm, getRandomFilmId, top250Id, pop100Film, fulterFilm} from "../../api";
@@ -15,7 +17,7 @@ import { objGenre, objCountris, arrTypeFilm } from "../../const";
 import axios from "axios";
 
 export function MainFilm () {
-    // в useState передаем начальное состояние оно может быть null undefaind.
+    // в useState передаем начальное состояние оно может быть null undefaind
     // или пропс что угодно, как работает хук - один раз вызывается useState в него передаем начальное состоаяние.
     // это состояние подхватывает переменная film, а уже то что мы передаем в setFilm передает состояние в переменную film
     const [filmId,setFilmId] = useState(null);
@@ -46,8 +48,9 @@ export function MainFilm () {
     const [valueRangeBefore, setValueRangeBefore] = useState("2022");
     const [addAnimationCarousel, setAddAnimationCarousel]= useState(0)
     const contentMainRef = useRef();
+    document.title = "Найди Фильм";
     useEffect(()=>{
-        console.log("привет")
+        
         },[])
     const moreGetId = (newValue) => {
     }
@@ -221,6 +224,8 @@ export function MainFilm () {
         setFilmId(null);
     }
     const handleCloseModalFunc = () => {
+        setSelectedGeners(true)
+
         setValueRangeBefore("2022")
         setValueRangeAfter("2000")
         setErrSwitchTextErr(null)
@@ -230,11 +235,13 @@ export function MainFilm () {
         setModalFulter(false)
     }
     const deletAllFavotireFilms = () => {
+        setArrFilmPOP100Id(null)
         setArrFilmId([])
         setCheckedStar(false)
     }
     
     const selectRandomFavoriteFilm = () => {
+        setArrFilmPOP100Id(null)
         let arrFilmKey = getRandomInt(0,arrFilmId.length)
         console.log("arrFilmKey " + arrFilmKey)
         setFilmId(arrFilmId[arrFilmKey])
@@ -265,7 +272,7 @@ export function MainFilm () {
         setModalVisibility(false);
         seterrLoad(null)
         setloading(true)
-        setValueSearch("Абсалютно случайный фильм")
+        setValueSearch("Абсолютно случайный фильм")
         getRandomFilmId()
         .then((id)=>{
             console.log("getRandomFilmId " + id)
@@ -328,19 +335,25 @@ export function MainFilm () {
         { adviceAboutButton && 
         <div className="backDiv" onClick={handleCloseModalAdvice}>
             <div className="adviceAboutTOP">
-                <div className="adviceArrow">🢁 🢁</div> 
+                <div className="adviceArrow">
+                    <img src={arrImg} alt="логотип" />
+                </div> 
                 Найти подборку Фильмов из <br /> ТОП 250 Кинопоиска или ТОП Этой недели 
                 </div>
             <div className="adviceAboutParametr">
-                <div className="adviceArrow">🢁 🢁</div>
+            <div className="adviceArrow">
+                    <img src={arrImg} alt="логотип" />
+                </div> 
                 Найти Фильм или сериал <br /> по указанным параметрам 
                 </div>
             <div className="adviceAboutRandom">
-                <div className="adviceArrow">🢁 🢁</div>
+            <div className="adviceArrow">
+                    <img src={arrImg} alt="логотип" />
+                </div> 
                 Найти случайный Фильм</div>
         </div>}
             
-            <Header onClick={handleSearchClickFunc} checkBoxValue={handleClickCheckBox} handleSearchRandomClickFunc ={handleSearchRandomClickFunc} clickFulterFilm ={handleCliclFulterFilm} checkedTypeEmpty={checkedTypeEmpty}/>
+            <Header onClick={handleSearchClickFunc} checkBoxValue={handleClickCheckBox} handleSearchRandomClickFunc ={handleSearchRandomClickFunc} clickFulterFilm ={handleCliclFulterFilm} checkedTypeEmpty={checkedTypeEmpty} selectedGeners={selectedGeners}/>
             {
                 loading == true && <LoadIndicator />
             }

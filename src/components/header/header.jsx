@@ -2,9 +2,7 @@ import Button from "../button";
 import Switch from "../switch";
 import { useRef, useEffect} from "react";
 import "./header.css";
-export function Header ({onClick,checkBoxValue,handleSearchRandomClickFunc,clickFulterFilm,checkedTypeEmpty}) {
-const switchEmptyRef = useRef();
-
+export function Header ({onClick,checkBoxValue,handleSearchRandomClickFunc,clickFulterFilm,checkedTypeEmpty,selectedGeners}) {
     return (
         <header className="header">
                 {
@@ -23,6 +21,10 @@ const switchEmptyRef = useRef();
                     <div className="headerSwitchz">
                         <Switch label="TOП 250" className="header__switchz top250" name="typeArr" checkBoxValue={checkBoxValue} valueRadio={"checkedTOP250"} checkedTypeEmpty={checkedTypeEmpty}/>
                         <Switch label="ТОП Недели" className="header__switchz topWeek" name="typeArr" checkBoxValue={checkBoxValue} valueRadio={"checkedPOP100"} checkedTypeEmpty={checkedTypeEmpty}/>
+                        {/*
+                            selectedGeners &&
+                            <Switch label="ТОП Недели 231" className="header__switchz topWeek" name="typeArr" checkBoxValue={checkBoxValue} valueRadio={"checkedPOP100"} checkedTypeEmpty={checkedTypeEmpty} checked={selectedGeners}/>
+                        */}
                     </div>
                     
                     <div className="SearchButtonFromSwitch">

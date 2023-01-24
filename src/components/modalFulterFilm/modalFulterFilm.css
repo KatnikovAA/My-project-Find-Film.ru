@@ -30,15 +30,18 @@
     width: 100%;
     height: 100%;
     color: red;
-    font-size: 40px;
+    font-size: 25px;
     padding-top: 100px;
     font-family: Impact Condensed;
     display: flex;
     justify-content: space-around;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
+}
 
-    
+.adviceArrow img{
+  height: 100px;
+  transform: scale(-1, 1)
 }
   .sliders_control {
     display: flex;

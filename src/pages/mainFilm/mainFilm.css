@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Impact Condensed';
+  src: url('./font/impact.ttf') format('truetype'),
+       url('./font/Impacted.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body{
     background-color:#f4f4f4;
     font-family: Verdana, sans-serif;
@@ -9,7 +18,7 @@ body{
 
 .favoritFilmPoster{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
    
 }
 

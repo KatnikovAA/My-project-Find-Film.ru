@@ -21,7 +21,7 @@ export function Switch ({label, className,value,onChange,checkBoxValue,valueRadi
 //<input className="checkbox" type="checkbox" id ="switch__checkbox" checked={checked} onChange={chengeCheckbox}/>
     return (
         <label className={`switch ${className}`}>
-            <input type="radio" name="findFilm" value={valueRadio} onChange={chengeCheckbox}/>
+            <input type="radio" name="findFilm" value={valueRadio} onChange={chengeCheckbox} checked={checked}/>
             {label}
         </label>
     )

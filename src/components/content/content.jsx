@@ -65,7 +65,7 @@ export function Content ({filmId, moreGetId, countFilmd, onChangeFavorite,isFavo
                         <div className="countries">{listCountries}</div>
                     </div>  
                 </div>
-                <div className="yearFilm flexDiv">
+                <div className="yearContentFilm flexDiv">
                     <div className="DivName">Год</div>
                     <div className="yearFilmDivResp">{film.year}</div>
                 </div>
